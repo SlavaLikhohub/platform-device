@@ -17,8 +17,16 @@
 
 	dummy@9f200000 {
 		compatible = "ti,plat_dummy";
-		reg = <0x9f200000 0x1000>,
-			<0x9f201000 0x8>;
+		reg = <0x9f200000 0x1000>, // Buff
+		<0x9f201000 12>,           // regs
+		<0x9f20100c 4>; 	   // time_reg
+	};
+
+	dummy@9f202000 {
+		compatible = "ti,plat_dummy";
+		reg = <0x9f202000 0x1000>, // Buff
+		<0x9f203000 12>,           // regs
+		<0x9f20300c 4>; 	   // time_reg
 	};
 };
 
